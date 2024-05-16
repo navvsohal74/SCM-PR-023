@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,7 +99,11 @@
  
         Array.from(buttons).forEach((button) => {
             button.addEventListener('click', (e) => {
-                if (e.target.innerHTML === '=') {
+                if (e.target.id === 'pi') {
+                    string += Math.PI;
+                } else if (e.target.id === 'xSquared') {
+                    string += '**2';
+                } else if (e.target.innerHTML === '=') {
                     string = eval(string);
                     document.querySelector('input').value = string;
                 } else if (e.target.innerHTML === 'C') {
